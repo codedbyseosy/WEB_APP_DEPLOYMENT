@@ -25,7 +25,7 @@ for index, todo in enumerate(todos):
         functions.write_todos(todos) #after removing todo, rewrite todos.txt with the new list
         del st.session_state[todo] #using the key of the widget which is todo, delete the completed
                                    #todo from the session state
-        st.experimental_rerun() #used to rerun the code, this is needed for checkboxes
+        st.rerun() #used to rerun the code, this is needed for checkboxes
    
 st.text_input(label="Enter a todo:", placeholder="Add a new todo...",
               on_change=add_todo, key="new_todo") #first arg "label" is always required
